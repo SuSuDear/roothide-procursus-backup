@@ -46,7 +46,7 @@ jobs:
           sudo apt-get install -y dpkg-dev gzip bzip2 curl ca-certificates python3 git-lfs
 
       - name: Sync llvm debs
-        if: github.event_name != 'push' && (github.event_name == 'schedule' || github.event.inputs.sync_llvm == 'true' || github.event.inputs.sync_llvm == true)
+        if: ${{ github.event_name != 'push' && (github.event_name == 'schedule' || github.event.inputs.sync_llvm == 'true') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SRC_OWNER: SuSuDear
