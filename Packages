@@ -1,0 +1,696 @@
+Package: clang
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), clang-14 (= 14.0.0~5.7.2~RELEASE), libc++-dev (= 14.0.0~5.7.2~RELEASE)
+Provides: c++-compiler, c-compiler, objc-compiler
+Filename: ./debs/clang_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6036
+MD5sum: f5e885e969af2871bc33dbe4770ee061
+SHA1: 16ba5fb40f08bbd148de0fc9656a7126a83013df
+SHA256: a61425eab8e6c06d782df82e795d4ae2a047fe738af08e51609e7ae86ccfc739
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: C, C++ and Objective-C compiler
+
+Package: clang-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 448
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE), ld64 (>= 609-3), libclang-common-14-dev (= 14.0.0~5.7.2~RELEASE), libc++-14-dev (= 14.0.0~5.7.2~RELEASE), build-essential
+Filename: ./debs/clang-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 73330
+MD5sum: e9f3c769edf28fa4e12136269cda1726
+SHA1: 23ae167ca892265b3674a1a27e60c27a779d2c89
+SHA256: ba3070fa55cb78efe14303378773ded243944e1b3d87870a33193ae2cec8090b
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: C, C++ and Objective-C compiler
+
+Package: clang-format
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), clang-format-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clang-format_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6270
+MD5sum: 09032d063c94a124dc28f38aac3a26aa
+SHA1: 33111a919e054aaba50c578011c7b11c40ad73c8
+SHA256: 2f5e2273bacff19bf9906daa0508e2630c48a6a9d72da4929c5c29fdcb965fd6
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Tool to format C/C++/Obj-C code
+ Clang-format is both a library and a stand-alone tool with the goal of
+ automatically reformatting C++ sources files according to configurable
+ style guides. To do so, clang-format uses Clang's Lexer to transform an
+ input file into a token stream and then changes all the whitespace around
+ those tokens. The goal is for clang-format to both serve both as a user
+ tool (ideally with powerful IDE integrations) and part of other
+ refactoring tools, e.g. to do a reformatting of all the lines changed
+ during a renaming.
+
+Package: clang-format-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 152
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clang-format-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 48838
+MD5sum: eccab226723966096224840aa98bb4e9
+SHA1: b81510634c3bbb044ec44f6eceba148f804a6dca
+SHA256: 69f80d9caecff2af5107f0a42f9813caa8f2ee45bb3e829b2d1fa59af4396395
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Tool to format C/C++/Obj-C code
+ Clang-format is both a library and a stand-alone tool with the goal of
+ automatically reformatting C++ sources files according to configurable
+ style guides. To do so, clang-format uses Clang's Lexer to transform an
+ input file into a token stream and then changes all the whitespace around
+ those tokens. The goal is for clang-format to both serve both as a user
+ tool (ideally with powerful IDE integrations) and part of other
+ refactoring tools, e.g. to do a reformatting of all the lines changed
+ during a renaming.
+
+Package: clang-tidy
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), clang-tidy-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clang-tidy_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6104
+MD5sum: 05daf2eb53a757bf19ef62f467b79462
+SHA1: 19da3e16bdc41355b7894c703d70ab7cf967aac1
+SHA256: 8d3f0f3535a1e313b3f575fbf658b8c3d1018aab2743f2fc65ba90aecbd99bae
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: clang-based C++ linter tool
+ Provide an extensible framework for diagnosing and fixing typical programming
+ errors, like style violations, interface misuse, or bugs that can be deduced
+ via static analysis. clang-tidy is modular and provides a convenient interface
+ for writing new checks.
+
+Package: clang-tidy-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 6564
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE), clang-tools-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clang-tidy-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 1769330
+MD5sum: 8d65c801efa13d04c7966a02719acaeb
+SHA1: b11976cd2f309d36f11a1a7635cb573a9d996ea3
+SHA256: 6e41a54a4c2814185246f59f51a3908a65cca705c4ca7d11d4999f7f1b78abfb
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: clang-based C++ linter tool
+ Provide an extensible framework for diagnosing and fixing typical programming
+ errors, like style violations, interface misuse, or bugs that can be deduced
+ via static analysis. clang-tidy is modular and provides a convenient interface
+ for writing new checks.
+
+Package: clang-tools
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), clang-tools-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clang-tools_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6532
+MD5sum: 5f4e60ba7d2c4f493724958aede8368e
+SHA1: 0609704048de9fc3f050d4ef3a956aa9324d601f
+SHA256: f7be005ba158efc9f010be2d59e1d1d0d36cd83d82ed2baff6ec0533baa9d478
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Extra clang tools
+
+Package: clang-tools-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 29020
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), clang-14 (= 14.0.0~5.7.2~RELEASE), python3, libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE), libclang-common-14-dev (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clang-tools-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 9328458
+MD5sum: 37e0e207b0a622f620d2e3e8585bae17
+SHA1: a4145b6b4ab72f429cbc6bc03ce093adc48db7cc
+SHA256: 8c6b7208ae11066b4d265b279cc903daa61e7ad922b1b0823888c50d7c669574
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Extra clang tools
+
+Package: clangd
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), clangd-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/clangd_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6080
+MD5sum: 9f61489db722687725e70e7ac9ebb3d1
+SHA1: 1755e7ee72ad2e839484e55bdcc020098dfb2a5a
+SHA256: 0f77253ca12a204167468706af65c09e16bcafb4b706c48a7ded2af3cbcf61fa
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Language server that provides IDE-like features to editors
+ clangd understands your C++ code and adds smart features to your editor:
+  - code completion
+  - compile errors
+  - go-to-definition
+  - and more.
+ .
+ clangd is a language server that implements the Language Server Protocol;
+ it can work with many editors through a plugin.
+
+Package: clangd-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 11220
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE), libclang-common-14-dev (= 14.0.0~5.7.2~RELEASE), build-essential
+Filename: ./debs/clangd-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 3621190
+MD5sum: f03cd0aa0a5b1a9fe9f5d1b8b6049c93
+SHA1: f4581ed7c35042df0b6d5775f910c33446271721
+SHA256: 196ecbe1c4f0d8377f97ca147328227389e21559c33e0348a9d08a936f07a6b7
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Language server that provides IDE-like features to editors
+ clangd understands your C++ code and adds smart features to your editor:
+  - code completion
+  - compile errors
+  - go-to-definition
+  - and more.
+ .
+ clangd is a language server that implements the Language Server Protocol;
+ it can work with many editors through a plugin.
+
+Package: debugserver
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), debugserver-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/debugserver_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 5948
+MD5sum: 790ca2d62eb8aa418b4e19dff4670a8a
+SHA1: 65f5acc0ac11639bdb5dceefae38815e3bf3ee34
+SHA256: 7d965463dd186d58c85fc1d80edecd047e0949d8f4d6d6fbdd456e2e2299a5cd
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Next generation, high-performance debugger (debugserver)
+
+Package: debugserver-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 512
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/debugserver-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 219014
+MD5sum: e2efb380727096867166bcedfc1884c5
+SHA1: 4a4ed0454af646894f749070a1482332da90c186
+SHA256: 60707888939039ecfb9e367fd1e1acbe42cf49930afb85aadf8c2a8cb1eee93d
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Next generation, high-performance debugger (debugserver)
+
+Package: libc++-14-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 6272
+Depends: roothide (>= 0.0.6), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/libc++-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 751042
+MD5sum: 3174d564416e961be79aac9c64f375d0
+SHA1: 79b949bd1a6075c3718423715e86712f97393ee1
+SHA256: b23a47e043927dc0704867905a5b51d2047a46d97493d0b35ce39bf2e233e5c3
+Section: Development
+Priority: optional
+Description: LLVM C++ Standard library (development files)
+
+Package: libc++-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), libc++-14-dev (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/libc++-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 5920
+MD5sum: ba13d0e34cbcb1d0b9bdad0ffb04c4f3
+SHA1: e962bf17dece6d8ae50712661444a3e314e3a2e9
+SHA256: 9ba80e16b55bea15f9294134c0b2bc0ea139f7889c3406112f81f3c095127488
+Section: Development
+Priority: optional
+Description: LLVM C++ Standard library (development files)
+
+Package: libclang-14-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 561720
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libclang1-14 (= 14.0.0~5.7.2~RELEASE), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-common-14-dev (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/libclang-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 183945106
+MD5sum: 9901a292798b6d7624b9f0a0f5efad74
+SHA1: b331c156a419aa933ecea5fd36545358d1b42d23
+SHA256: d1ab6d28a5a575bf2fd1b752e8c2caebebb88d2a3aa21ca54c33ea44c934de41
+Section: Development
+Priority: optional
+Description: Clang library - Development package
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang headers to develop extensions over
+ libclang1-14.
+
+Package: libclang-common-14-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 225312
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/libclang-common-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 54007612
+MD5sum: 33f2f74d0f4a9698bfa1c40b850192fd
+SHA1: a977426e45fbaa4376adc7ce35197b4ff2078a9a
+SHA256: 9ea6eb3dbcc636fdaa7e1c41511b673822cc7794138b08d54aff6589586c61b2
+Section: Development
+Priority: optional
+Description: Clang library - Common development package
+
+Package: libclang-cpp14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 52548
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/libclang-cpp14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 15659388
+MD5sum: 72a57975062cd2ca72ab580a1c130c38
+SHA1: 19e511afb3d33bd99609367245d7eeb76bfc531a
+SHA256: 1cec253f102a4f398b4a39131447484d7393605ffdbf5c592696803f270db024
+Section: Development
+Priority: optional
+Description: Modular compiler and toolchain technologies, runtime library
+
+Package: libclang1-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 32920
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/libclang1-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 10741352
+MD5sum: ab6ee3ffc02415334e2ad9f5ba6a0d2d
+SHA1: a8ebe2eb6292a943aabdd5091cea83716aac9d49
+SHA256: ecfbe916129841b2f6b3d8f77b5a20b44add494b944351d47ec77301a6462d07
+Section: Development
+Priority: optional
+Description: C interface to the Clang library
+ Clang project is a C, C++, Objective C and Objective C++ front-end
+ based on the LLVM compiler. Its goal is to offer a replacement to the
+ GNU Compiler Collection (GCC).
+ .
+ Clang implements all of the ISO C++ 1998, 11, 14 and 17 standards and also
+ provides most of the support of C++20.
+ .
+ This package contains the Clang library.
+ .
+ The C Interface to Clang provides a relatively small API that exposes
+ facilities for parsing source code into an abstract syntax tree (AST),
+ loading already-parsed ASTs, traversing the AST, associating physical source
+ locations with elements within the AST, and other facilities that support
+ Clang-based development tools.
+
+Package: liblld-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 22168
+Depends: roothide (>= 0.0.6), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/liblld-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 8647952
+MD5sum: 088ccb7ab489bc383c98b1d7d448e261
+SHA1: c38ec7d52a5f680deb2c88d4128b7da44d969cfa
+SHA256: cdf1ee1ca124d1bb7c83cb225a8017b4fdf69401856421cd0b061875c0df5440
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: LLVM-based linker, library
+ LLD is a new, high-performance linker. It is built as a set of reusable
+ components which highly leverage existing libraries in the larger LLVM
+ Project.
+ .
+ This package contains the LLD runtime library.
+
+Package: liblld-14-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 204
+Depends: roothide (>= 0.0.6), liblld-14-dev (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/liblld-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 39338
+MD5sum: 645373be9a57bf50a60bdfa467c1550b
+SHA1: 69275c6413b134933bd0ad6c84a989d799c96049
+SHA256: 3fd632efaca43bc231503596a3d6943ab3bf2dd45d8800c4d7d716a52100a4cc
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: LLVM-based linker, header files
+ LLD is a new, high-performance linker. It is built as a set of reusable
+ components which highly leverage existing libraries in the larger LLVM
+ Project.
+ .
+ This package provides the header files to build extension over lld.
+
+Package: liblldb-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 120756
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE), libncursesw6, libedit0, liblzma5 (>= 5.2.5)
+Filename: ./debs/liblldb-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 44236918
+MD5sum: b15da6c99624dd5e22c46a740f4f20e0
+SHA1: fbb892d91f6f3d98eb50d83106be410396d2b8bf
+SHA256: c52f91728aad6980ae788b417effc5cb35bb2c22d5af9b25548542c77ae8e718
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Next generation, high-performance debugger, library
+
+Package: liblldb-14-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 4044
+Depends: roothide (>= 0.0.6), liblldb-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/liblldb-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 658358
+MD5sum: d8a5eb7bd883b6861398a3135da191fe
+SHA1: b9f66143c75dcd55165aab6088c77020d147f885
+SHA256: 1fba0ff7f5e8e77cf70a8f37eaa22dc4859273b4f1f0d364cd5c6f552ef4ccdb
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Next generation, high-performance debugger, library
+
+Package: libllvm14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 65724
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libncursesw6 (>= 6.0), libedit0, libffi8
+Filename: ./debs/libllvm14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 23314618
+MD5sum: 117944825946a3ddd5afd063b910c0d8
+SHA1: 7bb2548bd68dd41370e1f1fc9be164a4d82a6223
+SHA256: f62b6c590c0f36c98ef244f866209b2f674231f9360c6ea856f738a4479081b8
+Section: Development
+Priority: optional
+Description: Modular compiler and toolchain technologies, runtime library
+
+Package: lld
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), lld-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/lld_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 5996
+MD5sum: 2e67c329799bae648b1f3eecc47d2315
+SHA1: 870407af7ec5bf55f1be7cf1e37544a03cafc13f
+SHA256: d56d05ede1c636227319678f95590585f8a4ae7cdc97806561cf273f8211ac78
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: LLVM linker
+
+Package: lld-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 4728
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), libxar1
+Filename: ./debs/lld-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 1556694
+MD5sum: b2158612e6b4641e6bc02f0ba6fb3592
+SHA1: 50dc551ebb369bce00e5d14ddd15047a3ddd0ec8
+SHA256: fe6f7b24a25c10679ccb9c4936247bc36dcd81989f6acafbbf329e49cb9d5fde
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: LLVM linker
+
+Package: lldb
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), lldb-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/lldb_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6020
+MD5sum: 2dad17dfcee88ad926eccc9c612eb388
+SHA1: bd2f1409db19e2a82b6b1c1e5c8ab37ae950613b
+SHA256: 39a7732410cd6d1b06c30c0e3d42047bf4f567e3ca1b8e6c7cd685de011cb6fe
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Next generation, high-performance debugger
+
+Package: lldb-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 113060
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), liblldb-14 (= 14.0.0~5.7.2~RELEASE), debugserver-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/lldb-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 41641410
+MD5sum: 38ffe160018cbaae29e61c98f125a62d
+SHA1: b1b79af73a6aaa9545d293551876e7baa1fb33b6
+SHA256: 84e444c4bf05e55294cc505d91a194806cdabbe965a2275f3011e714b83663e3
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Next generation, high-performance debugger
+
+Package: llvm
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), llvm-14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/llvm_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 7282
+MD5sum: 60e37196e875e3cdc9031c8a8e058e39
+SHA1: f9e253ad36a65b9fd3d3de9e1e47f26de600d9f7
+SHA256: a7577a062a88d79d3d05f839a4175515a8aee0e0483a41aafa70728ec01ecebc
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Low-Level Virtual Machine (LLVM)
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default llvm package.
+
+Package: llvm-14
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 45128
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), llvm-14-linker-tools (= 14.0.0~5.7.2~RELEASE), llvm-14-runtime (= 14.0.0~5.7.2~RELEASE), libncursesw6, libxar1
+Filename: ./debs/llvm-14_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 16049894
+MD5sum: fb6e6d9639a4680ff08aeb80c8f2f2a3
+SHA1: 331f9f6bcd8060cd986b0e75500822ce405fd874
+SHA256: 34c837d357b564bcaad08c5bc28d5760aca8b2ed984f0722d15b8ac6c3536b53
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ The strengths of the LLVM infrastructure are its extremely
+ simple design (which makes it easy to understand and use),
+ source-language independence, powerful mid-level optimizer, automated
+ compiler debugging support, extensibility, and its stability and
+ reliability. LLVM is currently being used to host a wide variety of
+ academic research projects and commercial projects. LLVM includes C
+ and C++ front-ends, a front-end for a Forth-like language (Stacker),
+ a young scheme front-end, and Java support is in development. LLVM can
+ generate code for X96, SparcV10, PowerPC or many other architectures.
+
+Package: llvm-14-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 273600
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE), llvm-14 (= 14.0.0~5.7.2~RELEASE), libclang-cpp14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/llvm-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 118004816
+MD5sum: b56d1f5162140acbfad149c087352140
+SHA1: 39c8362efeeaee009603f788319b1c5f62de4130
+SHA256: a8b83f2209a09128f8efbe11a1b2355a8dbc72169a8435dd53eb0b188fb3f290
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Modular compiler and toolchain technologies, libraries and headers
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the libraries and headers to develop applications
+ using llvm.
+
+Package: llvm-14-linker-tools
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 4628
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/llvm-14-linker-tools_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 1668616
+MD5sum: 98515314fb5ddb07bfabaa7cd928b7cf
+SHA1: f81f4e74022141fac74bb927a8a40d391e06299d
+SHA256: 016151e417dd1c967c1b1c8394a0cd8ee3389380af51b1cfe3c7d6fae0ea472a
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Modular compiler and toolchain technologies
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ This package contains the LLVMgold and LLVMPolly linker plugins.
+
+Package: llvm-14-runtime
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 216
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14 (= 14.0.0~5.7.2~RELEASE)
+Filename: ./debs/llvm-14-runtime_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 72850
+MD5sum: 4e7902e293f56b35fa24990d2c07dce2
+SHA1: 8f633ad80c7a551211cea6b0af19c169efa2c5f1
+SHA256: d90a181898104e13e2167647abdb1126ea8e9ee5392cd518a089dd3defb59c0b
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Modular compiler and toolchain technologies, IR interpreter
+ LLVM is a collection of libraries and tools that make it easy to build
+ compilers, optimizers, just-in-time code generators, and many other
+ compiler-related programs.
+ .
+ LLVM uses a single, language-independent virtual instruction set both
+ as an offline code representation (to communicate code between
+ compiler phases and to run-time systems) and as the compiler internal
+ representation (to analyze and transform programs). This persistent
+ code representation allows a common set of sophisticated compiler
+ techniques to be applied at compile-time, link-time, install-time,
+ run-time, or "idle-time" (between program runs).
+ .
+ This package provides the minimal required to execute programs in LLVM
+ format.
+
+Package: llvm-dev
+Version: 14.0.0~5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), llvm-14-dev (= 14.0.0~5.7.2~RELEASE), llvm-14-linker-tools (= 14.0.0~5.7.2~RELEASE)
+Conflicts: libto
+Replaces: liblto
+Provides: liblto
+Filename: ./debs/llvm-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6206
+MD5sum: 780718055f51cc0cdd05f2d022e95604
+SHA1: eda8ec284bb30a93f4cf1a1de3e5992572362b7a
+SHA256: decceec21187e8894f402100c442922a14ea4ddeb0b1581b8f2e7d4094bd1c51
+Section: Development
+Priority: optional
+Homepage: https://www.llvm.org/
+Description: Low-Level Virtual Machine (LLVM), libraries and headers
+ The Low-Level Virtual Machine (LLVM) is a collection of libraries and
+ tools that make it easy to build compilers, optimizers, Just-In-Time
+ code generators, and many other compiler-related programs.
+ .
+ This is a dependency package providing the default libraries and headers.
+
+Package: swift
+Version: 5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 8
+Depends: roothide (>= 0.0.6), swift-5.7.2
+Conflicts: com.kabiroberai.swift-toolchain
+Replaces: com.kabiroberai.swift-toolchain
+Filename: ./debs/swift_5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 6222
+MD5sum: e35e05ed71fc2e6b8fcf94bc1280dabc
+SHA1: 49430a8c3af9407b42a462b886d40a871cae09d3
+SHA256: 04390963a91f280b4cfb060e160eed5710599b5140d444ebe1f83b729d333c4c
+Section: Development
+Priority: optional
+Homepage: https://swift.org/
+Description: Swift developer package
+
+Package: swift-5.7.2
+Version: 5.7.2~RELEASE
+Architecture: iphoneos-arm64e
+Maintainer: RootHide <RootHideDev@twitter>
+Installed-Size: 643360
+Depends: roothide (>= 0.0.6), libiosexec1 (>= 1.3.1), libllvm14, ld64 (>= 609-3), build-essential
+Filename: ./debs/swift-5.7.2_5.7.2~RELEASE_iphoneos-arm64e.deb
+Size: 222017714
+MD5sum: 5dbb394f6be93d2868f5e0b990389a0c
+SHA1: 34f6c4dfd6fc61199614d405a93665ebe464f066
+SHA256: ed91f42f43ebec0f366a0c66fbc914af27517a3657a7ff6dd6609c935ef700d2
+Section: Development
+Priority: optional
+Homepage: https://swift.org/
+Description: Swift developer package
+
