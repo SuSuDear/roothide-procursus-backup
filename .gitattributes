@@ -1,4 +1,1 @@
-# 注意：不要把 *.deb 放进 Git LFS。
-# GitHub Pages / 自定义域名不会展开 LFS，客户端只会下到 ~130 字节指针，
-# 从而出现“大小应为 16MB，获得了 133”。
-# <=100MB 的 deb 用普通 Git 文件；>100MB 走 GitHub Release。
+# deb files must NOT use Git LFS (Pages cannot serve LFS content).

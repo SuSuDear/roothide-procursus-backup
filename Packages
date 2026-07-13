@@ -17762,3 +17762,4 @@ Description: fast lossless compression algorithm -- CLI tool
  real-time compression scenarios at zlib-level compression ratio.
  .
  This package contains the CLI program implementing zstd.
+
