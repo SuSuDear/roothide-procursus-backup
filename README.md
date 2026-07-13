@@ -72,3 +72,16 @@ https://media.githubusercontent.com/media/SuSuDear/roothide-procursus-backup/mai
 这个地址会返回真实 deb（`!<arch>`），而不是指针。
 
 刷新软件源缓存后再安装。
+
+
+## 安装失败“大小应为 xx，获得了 130”的根因与修复
+
+根因：`*.deb` 曾用 **Git LFS** 存储。  
+GitHub Pages / `susuboy.cn` **不会**返回 LFS 真实文件，只会返回约 130 字节指针。
+
+### 正确托管方式（已切换）
+
+- **<=100MB**：普通 Git 文件 + `Filename: ./debs/xxx.deb`（同域下载）
+- **>100MB**：上传到 GitHub Release `debs-large`，`Filename` 用 Release 绝对地址
+
+请重新跑一次 Actions：`Update APT Repo`，把仓库里的 LFS 指针替换成真实 deb。
