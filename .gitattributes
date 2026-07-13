@@ -1,0 +1,2 @@
+# 大 deb 走 Git LFS，避免 GitHub 100MB 限制
+*.deb filter=lfs diff=lfs merge=lfs -text

@@ -46,3 +46,11 @@ Components:
 ./scripts/sync_llvm_debs.sh
 ./scripts/generate_packages.sh
 ```
+
+
+## 大文件说明（Git LFS）
+
+GitHub 普通文件上限 100MB。`llvm` 里有超过 100MB 的 deb（如 `swift`、`libclang-14-dev`），因此：
+
+- 所有 `*.deb` 通过 **Git LFS** 存储
+- Actions 会自动 `git lfs install` 后再 commit/push
