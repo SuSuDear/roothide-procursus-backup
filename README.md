@@ -51,3 +51,24 @@ Components:
 ## 大文件说明（Git LFS）
 
 GitHub 普通文件上限 100MB。大 deb 通过 **Git LFS** 存储。
+
+
+## 重要：为什么会“大小应为 xx，获得了 130”？
+
+因为 `*.deb` 使用了 **Git LFS**。
+
+- GitHub Pages / `raw.githubusercontent.com` 返回的是 **LFS 指针文件**（大约 130 字节）
+- 软件源记录的是真实 deb 大小（几 MB ~ 几百 MB）
+- 所以 Sileo/apt 会报：文件大小应为 16049894，获得了 133
+
+### 解决办法（已内置）
+
+`Packages` 里的 `Filename` 改为绝对地址：
+
+```text
+https://media.githubusercontent.com/media/SuSuDear/roothide-procursus-backup/main/debs/xxx.deb
+```
+
+这个地址会返回真实 deb（`!<arch>`），而不是指针。
+
+刷新软件源缓存后再安装。
