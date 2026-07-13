@@ -45,11 +45,11 @@ limit = ${LIMIT}
 src_media = "${SRC_MEDIA_BASE}".rstrip("/")
 KNOWN = {
   "swift-5.7.2_5.7.2~RELEASE_iphoneos-arm64e.deb":
-    "procursus/pool/main/iphoneos-arm64e/1900/llvm/swift-5.7.2_5.7.2~RELEASE_iphoneos-arm64e.deb",
+    "https://github.com/SuSuDear/roothide-procursus-backup/releases/download/debs-large/swift-5.7.2_5.7.2.RELEASE_iphoneos-arm64e.deb",
   "llvm-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb":
-    "procursus/pool/main/iphoneos-arm64e/1900/llvm/llvm-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb",
+    "https://github.com/SuSuDear/roothide-procursus-backup/releases/download/debs-large/llvm-14-dev_14.0.0.5.7.2.RELEASE_iphoneos-arm64e.deb",
   "libclang-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb":
-    "procursus/pool/main/iphoneos-arm64e/1900/llvm/libclang-14-dev_14.0.0~5.7.2~RELEASE_iphoneos-arm64e.deb",
+    "https://github.com/SuSuDear/roothide-procursus-backup/releases/download/debs-large/libclang-14-dev_14.0.0.5.7.2.RELEASE_iphoneos-arm64e.deb",
 }
 
 def fix_name(name: str) -> str:
@@ -77,8 +77,12 @@ for b in blocks:
     name = fix_name(meta.get("Filename","").rstrip("/").split("/")[-1])
     size = int(meta.get("Size","0") or 0)
     if name in KNOWN or size > limit:
-        path = KNOWN.get(name) or f"procursus/pool/main/iphoneos-arm64e/1900/{meta.get('Package','unknown')}/{name}"
-        meta["Filename"] = media_url(path)
+        url = KNOWN.get(name)
+        if url and url.startswith("http"):
+            meta["Filename"] = url
+        else:
+            path = url or f"procursus/pool/main/iphoneos-arm64e/1900/{meta.get('Package','unknown')}/{name}"
+            meta["Filename"] = media_url(path)
         med += 1
     else:
         meta["Filename"] = f"./debs/{name}"
