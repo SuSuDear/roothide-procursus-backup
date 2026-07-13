@@ -12,9 +12,10 @@ Packages.bz2
 Release
 CydiaIcon.png
 scripts/
-  sync_llvm_debs.sh   # 从 SuSuDear/roothide.github.io 的 llvm 目录拉 deb
+  sync_pool_debs.sh   # 从 SuSuDear/roothide.github.io 的 1900 全量拉 deb
   generate_packages.sh
-.github/workflows/update-repo.yml
+  commit_and_push.sh
+.github/workflows/update_apt_repo.yml
 ```
 
 ## 源地址（发行版）
@@ -30,27 +31,23 @@ Components:
 工作流 `Update APT Repo` 会：
 
 1. 拉取  
-   `SuSuDear/roothide.github.io/procursus/pool/main/iphoneos-arm64e/1900/llvm`  
-   下全部 `.deb`
+   `SuSuDear/roothide.github.io/procursus/pool/main/iphoneos-arm64e/1900/**`  
+   下**全部** `.deb`（不只是 llvm）
 2. **平铺**保存到 `debs/`  
    例如：`debs/swift_5.7.2~RELEASE_iphoneos-arm64e.deb`  
-   **不会**出现 `debs/llvm/...`
+   **不会**出现 `debs/llvm/...` 或 `debs/bash/...`
 3. 生成 `Packages` / `Packages.gz` / `Packages.bz2`
-4. 更新 `Release` 校验和并 push
+4. 更新 `Release` 校验和并 push（`*.deb` 走 Git LFS）
 
 手动触发：GitHub → Actions → Update APT Repo → Run workflow
 
 ## 本地生成
 
 ```bash
-./scripts/sync_llvm_debs.sh
+./scripts/sync_pool_debs.sh
 ./scripts/generate_packages.sh
 ```
 
-
 ## 大文件说明（Git LFS）
 
-GitHub 普通文件上限 100MB。`llvm` 里有超过 100MB 的 deb（如 `swift`、`libclang-14-dev`），因此：
-
-- 所有 `*.deb` 通过 **Git LFS** 存储
-- Actions 会自动 `git lfs install` 后再 commit/push
+GitHub 普通文件上限 100MB。大 deb 通过 **Git LFS** 存储。

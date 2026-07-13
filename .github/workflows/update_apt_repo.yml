@@ -11,6 +11,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # 全量 1900 可能很久
+    timeout-minutes: 360
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,17 +25,17 @@ jobs:
           sudo apt-get install -y dpkg-dev gzip bzip2 curl ca-certificates python3 git-lfs
           git lfs install
 
-      - name: Sync llvm debs
+      - name: Sync all 1900 debs (flat into debs/)
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SRC_OWNER: SuSuDear
           SRC_REPO: roothide.github.io
           SRC_BRANCH: main
-          SRC_PATH: procursus/pool/main/iphoneos-arm64e/1900/llvm
+          SRC_PATH: procursus/pool/main/iphoneos-arm64e/1900
           DEBS_DIR: debs
         run: |
-          chmod +x scripts/sync_llvm_debs.sh
-          ./scripts/sync_llvm_debs.sh
+          chmod +x scripts/sync_pool_debs.sh
+          ./scripts/sync_pool_debs.sh
 
       - name: Generate Packages
         run: |
