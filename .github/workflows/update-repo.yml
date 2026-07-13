@@ -1,0 +1,76 @@
+name: Update APT Repo
+
+on:
+  workflow_dispatch:
+    inputs:
+      sync_llvm:
+        description: "从 SuSuDear/roothide.github.io 的 llvm 目录同步 deb 到 debs/（平铺）"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+  schedule:
+    # 每天 UTC 16:00
+    - cron: "0 16 * * *"
+  push:
+    paths:
+      - "debs/**"
+      - "scripts/**"
+      - ".github/workflows/update-repo.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-repo
+  cancel-in-progress: true
+
+jobs:
+  build-packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y dpkg-dev gzip bzip2 curl ca-certificates python3
+
+      - name: Sync llvm debs (flat into debs/)
+        if: ${{ github.event_name != 'push' && (github.event_name == 'schedule' || inputs.sync_llvm == 'true') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SRC_OWNER: SuSuDear
+          SRC_REPO: roothide.github.io
+          SRC_BRANCH: main
+          SRC_PATH: procursus/pool/main/iphoneos-arm64e/1900/llvm
+          DEBS_DIR: debs
+        run: |
+          chmod +x scripts/sync_llvm_debs.sh
+          ./scripts/sync_llvm_debs.sh
+
+      - name: Generate Packages / Packages.gz
+        run: |
+          chmod +x scripts/generate_packages.sh
+          ./scripts/generate_packages.sh
+
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # 只提交仓库元数据与 deb（平铺）
+          git add debs Packages Packages.gz Packages.bz2 Release scripts .github/workflows || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: sync llvm debs & regenerate Packages $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push origin HEAD:${{ github.ref_name }}
